@@ -10,8 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.android.swapnil.fragactlifecycle.MainActivity">
 
-    <include android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/common_layout_container"
-        layout="@layout/common_layout"/>
+    <include layout="@layout/common_layout"/>
+
 </LinearLayout>

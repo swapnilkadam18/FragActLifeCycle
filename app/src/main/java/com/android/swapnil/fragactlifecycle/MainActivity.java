@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.swapnil.fragments.FragmentA;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final String TAG = MainActivity.class.getSimpleName();
     private Button nextAct;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String defaultText = nextAct.getText().toString()+ "B";
         nextAct.setText(defaultText);
         nextAct.setOnClickListener(this);
+
+        FragmentA fragmentA = new FragmentA();
+        getSupportFragmentManager().beginTransaction().add(R.id.act_a_container,fragmentA);
     }
 
     @Override
